@@ -25,12 +25,10 @@ function! semhl#highlight()
   let currentLineNumber = bufferLinesCount
 	while currentLineNumber
 		let currentLine = s:strip(getline(currentLineNumber))
-    " echom "currentLine:" currentLine
 
     " For this line, iterate over all words
 		let cursor = 0
 		while 1
-      " echom "cursor:" cursor
       " matchstr = return string if found in currentLine, offset cursor
 			let word = matchstr(currentLine, s:pattern, cursor)
 
@@ -43,15 +41,10 @@ function! semhl#highlight()
 			if (noBlackListExistsForFileType || !get(blacklistForFileType, word))
         execute 'syn keyword _semantic' . currentColor . ' ' . word
         let currentColor = (currentColor + 1) % colorsCount
-        " echom '    ' word
-      else
-        " echom '    ' word '(blacklist)'
 			endif
 
 			let cursor += len(word) + 1
 		endwhile
-    " echom ''
-    " echom ''
 		let currentLineNumber -= 1
 	endwhile
 endfunction
