@@ -2,7 +2,7 @@
 
 This plugin syntax highlights each unique word with an unique color.
 
-<img src="https://raw.githubusercontent.com/jaxbot/semantic-highlight.vim/master/semantic-highlight.png">
+![semantic-highlight](https://cloud.githubusercontent.com/assets/3755413/13548558/65de3b68-e2f3-11e5-9362-8c5fddb564a0.png)
 
 Use it like this:
 
