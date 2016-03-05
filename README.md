@@ -8,7 +8,7 @@ Use it like this:
 
 ```viml
 " Install it with some plugin manager. :)
-Plugin jonathanewerner/semantic-highlight
+Plugin jonathanewerner/semantic-highlight.vim
 
 " Define autocmds that trigger the highlighting function on given filetypes
 autocmd FileType jsx,javascript call semhl#highlight()
