@@ -2,7 +2,7 @@
 
 This plugin syntax highlights each unique word with an unique color.
 
-![semantic-highlight](https://cloud.githubusercontent.com/assets/3755413/13548558/65de3b68-e2f3-11e5-9362-8c5fddb564a0.png)
+![semantic-highlight](https://cloud.githubusercontent.com/assets/3755413/13549749/fb8df608-e30c-11e5-9a1b-65845e70ca86.png)
 
 Use it like this:
 
