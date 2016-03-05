@@ -6,34 +6,39 @@ This plugin syntax highlights each unique word with an unique color.
 
 Use it like this:
 
-    " Install it with some plugin manager. :)
-    Plugin jonathanewerner/semantic-highlight
+```viml
+" Install it with some plugin manager. :)
+Plugin jonathanewerner/semantic-highlight
 
-    " Define autocmds that trigger the highlighting function on given filetypes
-    autocmd FileType jsx,javascript call semhl#highlight()
+" Define autocmds that trigger the highlighting function on given filetypes
+autocmd FileType jsx,javascript call semhl#highlight()
 
-    " Optionally also recompute on CursorHold. Neat when you're actually adding
-    "variables to your code. ;)
-    autocmd CursorHold *.jsx,*.js call semhl#highlight()
+" Optionally also recompute on CursorHold. Neat when you're actually adding
+"variables to your code. ;)
+autocmd CursorHold *.jsx,*.js call semhl#highlight()
+```
 
 It's generally language agnostic as it justs iterates through all lines of a
 file and then finds tokens with a simple word-ish regex, but there are
 "blacklisted" words for some languages, see `autoload/semhl/config.vim`.
+In the screenshot, for example, `export`, `function`, `return` & `const` are on the blacklist.
+
 You can override the default blacklist like this:
 
-    let g:semhl_blacklist = {
-    \  'javascript': {
-    \    'var': 0,
-    \    'function': 1,
-    \     ...
-    \  },
-    \  'python': {
-    \     ...
-    \  },
-    \}
+```viml
+let g:semhl_blacklist = {
+\  'javascript': {
+\    'var': 0,
+\    'function': 1,
+\     ...
+\  },
+\  'python': {
+\     ...
+\  },
+\}
+```
 
-This will completely override the built in blacklist dictionary, so you might
-want to copy paste from `autoload/semhl/config.vim`.
+This will completely override the built in blacklist dictionary, so you might want to copy paste from `autoload/semhl/config.vim`.
 
 ====================================================================
 
