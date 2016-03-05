@@ -29,3 +29,4 @@ Stuff I don't need from the original & reasons:
 
 Stuff I might have improved:
 - The blacklist lookup was implemented as a search through an array = O(n). I replaced it with a dictionary lookup = ~O(1). This lookup occured in the central tight loop of the algorithm, so perf benefits could be huge. Haven't found out how to profile. :) 
+- I put all code in `autoload`. When running `vim --startuptime` with the original plugin, i found that it took ~500ms alone. (Don't fully understand why). With all code in `autolad` this issue appears to have gone.
