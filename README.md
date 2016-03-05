@@ -26,6 +26,7 @@ In the screenshot, for example, `export`, `function`, `return` & `const` are on 
 You can override the default blacklist like this (The blacklist is a dictionary to allow performant lookup; this seems to be the VimL-way of implementing sets.):
 
 ```viml
+" The keys are filetypes; the values are dictionaries with blacklisted words which should map to 1.
 let g:semhl_blacklist = {
 \  'javascript': {
 \    'var': 1,
