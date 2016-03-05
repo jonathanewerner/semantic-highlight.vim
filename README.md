@@ -20,7 +20,7 @@ blacklists or fork it.
 
 ### why
 
-I've been using [https://github.com/jaxbot/semantic-highlight.vim](jaxbot/semantic-highlight) over a year now. It's pretty essential for my vim usage, so **thanks Jonathan**. :) I forked this in an effort to learn VimL. In the process i slimmed down the API surface and refactored the code, primarily as a learning effort.
+I've been using https://github.com/jaxbot/semantic-highlight.vim over a year now. It's pretty essential for my vim usage, so **thanks Jonathan**. :) I forked this in an effort to learn VimL. In the process i slimmed down the API surface and refactored the code, primarily as a learning effort.
 
 Stuff I don't need from the original & reasons:
 - Caching. I don't like it because it leads to variables unnecessarily having the same colors and code complexity. I also don't care if variable -> color mappings are persisted across files.
