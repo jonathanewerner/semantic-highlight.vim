@@ -25,7 +25,7 @@ I've been using https://github.com/jaxbot/semantic-highlight.vim over a year now
 Stuff I don't need from the original & reasons:
 - Caching. I don't like it because it leads to variables unnecessarily having the same colors and code complexity. I also don't care if variable -> color mappings are persisted across files.
 - Non-GUI colors. For me the concept doesn't make much sense with 16 colors. I've got way more identifiers per file on average.
-- Weird API for specifying needed autocmds. Rather write them myself. :)
+- Weird API for specifying needed autocmds. I'd rather have that in userland. :)
 
 Stuff I might have improved:
 - The blacklist lookup was implemented as a search through an array = O(n). I replaced it with a dictionary lookup = ~O(1). This lookup occured in the central tight loop of the algorithm, so perf benefits could be huge. Haven't found out how to profile. :) 
