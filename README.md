@@ -23,13 +23,14 @@ file and then finds tokens with a simple word-ish regex, but there are
 "blacklisted" words for some languages, see `autoload/semhl/config.vim`.
 In the screenshot, for example, `export`, `function`, `return` & `const` are on the blacklist.
 
-You can override the default blacklist like this:
+You can override the default blacklist like this (The blacklist is a dictionary to allow performant lookup; this seems to be the VimL-way of implementing sets.):
 
 ```viml
 let g:semhl_blacklist = {
 \  'javascript': {
-\    'var': 0,
+\    'var': 1,
 \    'function': 1,
+\    'const': 1,
 \     ...
 \  },
 \  'python': {
